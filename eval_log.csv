@@ -1,0 +1,4 @@
+timestamp,label,set,n,hit@1,hit@3,hit@10,mrr
+2026-10-13T02:21:35,baseline-dense,eval,17,0.4706,0.5294,0.8235,0.5415
+2026-10-13T02:32:51,determinism-check,eval,17,0.4706,0.5294,0.8235,0.5415
+2026-10-13T02:38:56,baseline-dense-v2,eval,17,0.4706,0.5294,0.8235,0.5415
