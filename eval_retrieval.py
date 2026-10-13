@@ -12,7 +12,8 @@ CUTOFFS = (1 , 3 , 10 )
 FAIL_RANK = 3 
 LOG_PATH = config.BASE_DIR / "eval_log.csv"
 LOG_COLUMNS = ["timestamp", "label" , "set" , "n"] + [f"hit@{k}" for k in CUTOFFS] + ["mrr"]
-
+DETAILS_PATH = config.BASE_DIR / "eval_details.csv"
+DETAIL_COLUMNS = ["label" , "set" , "question" , "rank" , "top3"]
 def validate (eval_set) :
     real_files = {p.name for p in config.DATA_DIR.glob(config.FILE_GLOB)}
     problems = []
@@ -117,6 +118,23 @@ def logs (label , set_name , n , metrics) :
         
         writer.writerow(row)
 
+def append_details(label, set_name, results):
+    file_existed = DETAILS_PATH.exists()
+    
+    with open(DETAILS_PATH, "a", newline = "", encoding = "utf-8") as f :
+        writer = csv.DictWriter(f , fieldnames = DETAIL_COLUMNS)
+    
+        if not file_existed:
+            writer.writeheader()
+    
+        for r in results:
+            writer.writerow({
+                "label": label,
+                "set": set_name,
+                "question": r["question"],
+                "rank": r["rank"] if r["rank"] is not None else "",
+                "top3": " | ".join(r["top3"]),
+            })
 
 def test () :
     assert rankings (["a" , "b" , "c"] , ["b"]) == 2
@@ -152,7 +170,7 @@ def main () :
     summary(metrics, len(results), args.set)
     fail(results)
     logs(args.label, args.set, len(results), metrics)
-
+    append_details(args.label, args.set, results)
     if args.set == "heldout":
         print("\nReminder: run the held-out set once, at the end. Tuning against it makes the numbers meaningless.")
 
