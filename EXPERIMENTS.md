@@ -59,16 +59,32 @@ I wrote the questions while looking at the filenames. So the title variants have
 ### Results
 | label | hit@1 | hit@3 | hit@10 | MRR | reverse_pairs in top 3 |
 |---|---|---|---|---|---|
-| A-raw | pending | pending | pending | pending | pending |
-| A-title | pending | pending | pending | pending | pending |
-| A-strip | pending | pending | pending | pending | pending |
-| A-strip-title | pending | pending | pending | pending | pending |
+| A-raw-2 | 47.1% | 52.9% | 82.4% | 0.542 | 7 |
+| A-title-2 | 52.9% | 76.5% | 88.2% | 0.647 | 2 |
+| A-strip-2 | 29.4% | 52.9% | 82.4% | 0.432 | 4 |
+| A-strip-title-2 | 52.9% | 70.6% | 94.1% | 0.644 | 3 |
+
+These numbers come only from the -2 reruns. My first strip run was scored under the label A-raw by mistake. I edited that label in eval_log.csv by hand (label text only, no numbers) and then changed it back, so A-raw now appears twice in eval_log.csv: once with the baseline numbers and once with the strip numbers. eval_details.csv has 34 rows under A-raw. My first A-strip-title run gave numbers identical to strip, probably because of a stale index. I stopped trusting the old rows, so I reran all four variants with a -2 label and checked the index stamp each time. The old rows are still in both files.
 
 ### What changed per question
-pending
+Title moved six questions up: single_number (not in top 10 to 8), sorted_arr_rotated (not in top 10 to 1), two sum (not in top 10 to 1), subarray sum k (5 to 1), count inversions (5 to 2) and merge sorted arrays (4 to 3). Five of those six ended in the top 3. single_number is still a miss at rank 8.
+
+It also cost me three questions. The leader question and the n/2 question both fell out of the top 10 (they were at rank 9). The n/3 question went from 3 to 5, the only top-3 loss. That n/3 question got worse in every variant: 3 in raw, 5 with title, 7 with strip, 10 with strip-title.
+
+Strip lost two top-3 questions (pairs 1 to 10, n/3 3 to 7) and gained two (subarray sum k 5 to 3, two sum from missing to 2), so it ends level on hit@3.
+
+### Prediction check
+1. Right. A-raw-2 matched the baseline exactly.
+2. Right. All three misses entered the top 10 with A-title-2. hit@10 only went from 14 to 15 because the leader and n/2 questions dropped out.
+3. Half right. hit@3 stayed at 9/17. I can't judge the single_number part, because it was already outside the top 10 in A-raw-2 and stayed out in A-strip-2. Strip cut hit@1 from 8 to 5 and MRR from 0.542 to 0.432, which I did not expect.
+4. Wrong, narrowly. A-strip-title-2 is behind A-title-2 on hit@3 (12 vs 13) and MRR (0.644 vs 0.647), and ahead on hit@10 (16 vs 15). One question either way.
+5. Half right. reverse_pairs was in the top 3 for 7 questions in A-raw-2, 2 in A-title-2 and 3 in A-strip-title-2, so the title variants dropped it as I guessed. But A-strip-2 also dropped it, to 4, and I expected it to stay within 1 of raw. I haven't checked why strip matters here.
 
 ### What surprised me
-pending
+Strip kept hit@3 the same but dropped hit@1 from 8 to 5. I thought removing boilerplate would be close to neutral. Title helped the short questions (two sum, "sorted and rotated") but pushed two long descriptive ones out of the top 10, though with 17 questions that could be chance. Strip also lowered the reverse_pairs count, which I didn't predict, and I don't know the reason yet. The first strip-title run being identical to strip was a bad run, not a result.
 
 ### Decision
+Adopt A-title. It wins 4 questions net on hit@3 and loses 1, which passes my rules. A-strip-title also passes (net +3, loses 1) and has the best hit@10, but it is one question behind title on hit@3, so I keep the simpler one. Strip alone loses two passing questions and hurts hit@1 and MRR, so I reject it. The title gain may be overstated, because I wrote the questions while looking at the filenames. The held-out check should say more.
+
+### Held-out result
 pending
