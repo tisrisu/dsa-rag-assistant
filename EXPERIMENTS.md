@@ -94,6 +94,6 @@ I ran the 5 held-out questions once for each variant, after the decision to adop
 | A-raw-heldout | 3/5 | 3/5 | 5/5 | 0.649 |
 | A-title-heldout | 4/5 | 4/5 | 4/5 | 0.800 |
 
-Title is one question ahead on hit@3, which is the number the agent's user feels. Raw is one question ahead on hit@10, because title lost one question completely. With 5 questions, one question is 20 points, so the hit@3 gain matches what I saw on the 17 questions but is not proof. I'm keeping title, with thin evidence.
+Title was one question ahead on hit@3, which is the number the agent's user feels. Raw was one question ahead on hit@10. Title moved "one number appears twice and another is missing" from rank 7 to rank 1, but it lost "walk through a grid layer by layer" (raw had it at rank 10, title put it outside the top 10). The other three questions were rank 1 in both. I haven't looked into why title lost that one. With 5 questions, one question is 20 points, so this is a rough check, not proof. I'm keeping title, with thin evidence.
 
 I also ran A-title-final once against the strip_title index by mistake, so I reran it as A-title-final-2 after rebuilding and checking the stamp. A-title-final-2 matched A-title-2 exactly.
