@@ -87,4 +87,4 @@ Strip kept hit@3 the same but dropped hit@1 from 8 to 5. I thought removing boil
 Adopt A-title. It wins 4 questions net on hit@3 and loses 1, which passes my rules. A-strip-title also passes (net +3, loses 1) and has the best hit@10, but it is one question behind title on hit@3, so I keep the simpler one. Strip alone loses two passing questions and hurts hit@1 and MRR, so I reject it. The title gain may be overstated, because I wrote the questions while looking at the filenames. The held-out check should say more.
 
 ### Held-out result
-pending
+I ran the 5 held-out questions once for each variant, after the decision was already committed. A-raw-heldout: hit@1 _/5, hit@3 _/5, hit@10 _/5. A-title-heldout: hit@1 _/5, hit@3 _/5, hit@10 _/5. With 5 questions, one question is 20 points, so this is a rough check, not proof. I also ran A-title-final by mistake against the strip_title index, so I reran it as A-title-final-2 after rebuilding and checking the stamp. A-title-final-2 matched A-title-2.

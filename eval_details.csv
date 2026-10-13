@@ -135,3 +135,47 @@ A-strip-title-2,eval,count inversions faster than checking every pair,2,count_in
 A-strip-title-2,eval,two sum,1,two_sum_optimal.cpp | 3_sum.cpp | missing_number.cpp
 A-strip-title-2,eval,next permutation,1,next_permutation.cpp | count_inversions_optimal.cpp | remove_duplicates_arr.cpp
 A-strip-title-2,eval,merge overlapping intervals,1,merge_intervals.cpp | merge_sorted_array.cpp | reverse_pairs.cpp
+A-title-final,eval,find the element that shows up more than half the time,1,majority_element.cpp | frequency_most_frequent_element.cpp | majority_elements_2.cpp
+A-title-final,eval,best day to buy and sell a share for maximum profit,1,stock_buy_sell.cpp | max_subarray_sum_index.cpp | frequency_most_frequent_element.cpp
+A-title-final,eval,which number appears once when every other appears twice,10,repeating_missing_numbers.cpp | remove_duplicates_arr.cpp | majority_elements_2.cpp
+A-title-final,eval,"Given an array of integers, find the total number of pairs where a larger number appears before a smaller number.",3,largest_subarray_sum_0.cpp | subarray_sum_equals_k.cpp | count_inversions_optimal.cpp
+A-title-final,eval,"Given an array of integers, return a list of all elements that are strictly greater than every element appearing to their right.",,second_largest_arr.cpp | rearrange_array_elem.cpp | majority_element.cpp
+A-title-final,eval,"Given two sorted integer arrays, merge them into a single sorted array containing all unique elements from both arrays.",4,merge_sorted_array.cpp | merge_intervals.cpp | reverse_pairs.cpp
+A-title-final,eval,check whether the array is sorted and then rotated,1,sorted_arr_rotated.cpp | merge_sorted_array.cpp | rotate_image.cpp
+A-title-final,eval,count subarrays whose elements add up to k,2,sub_array_xor_k.cpp | subarray_sum_equals_k.cpp | sub_array_xor_k_optimal.cpp
+A-title-final,eval,longest stretch of elements adding up to k,1,longest_subarr_sum_k.cpp | longest_consecutive_seq.cpp | frequency_most_frequent_element.cpp
+A-title-final,eval,"Given an array of size n, find the element that appears strictly more than n/2 times, assuming one always exists",6,repeating_missing_numbers.cpp | second_largest_arr.cpp | majority_elements_2.cpp
+A-title-final,eval,"Given an array of integers of size n, find all elements that appear strictly more than n/3 times",10,repeating_missing_numbers.cpp | remove_duplicates_arr.cpp | largest_subarray_sum_0.cpp
+A-title-final,eval,find four numbers that add up to a target,1,4Sum_brute_force.cpp | 4Sum_optimal.cpp | repeating_missing_numbers.cpp
+A-title-final,eval,count subarrays with xor equal to k,1,sub_array_xor_k.cpp | sub_array_xor_k_optimal.cpp | subarray_sum_equals_k.cpp
+A-title-final,eval,count inversions faster than checking every pair,2,count_inversions.cpp | count_inversions_optimal.cpp | reverse_pairs.cpp
+A-title-final,eval,two sum,1,two_sum_optimal.cpp | 3_sum.cpp | missing_number.cpp
+A-title-final,eval,next permutation,1,next_permutation.cpp | count_inversions_optimal.cpp | remove_duplicates_arr.cpp
+A-title-final,eval,merge overlapping intervals,1,merge_intervals.cpp | merge_sorted_array.cpp | reverse_pairs.cpp
+A-title-final-2,eval,find the element that shows up more than half the time,2,frequency_most_frequent_element.cpp | majority_element.cpp | majority_elements_2.cpp
+A-title-final-2,eval,best day to buy and sell a share for maximum profit,1,stock_buy_sell.cpp | frequency_most_frequent_element.cpp | max_subarray_sum_index.cpp
+A-title-final-2,eval,which number appears once when every other appears twice,8,repeating_missing_numbers.cpp | majority_elements_2.cpp | remove_duplicates_arr.cpp
+A-title-final-2,eval,"Given an array of integers, find the total number of pairs where a larger number appears before a smaller number.",3,subarray_sum_equals_k.cpp | repeating_missing_numbers.cpp | count_inversions_optimal.cpp
+A-title-final-2,eval,"Given an array of integers, return a list of all elements that are strictly greater than every element appearing to their right.",,second_largest_arr.cpp | sub_array_xor_k_optimal.cpp | majority_elements_2.cpp
+A-title-final-2,eval,"Given two sorted integer arrays, merge them into a single sorted array containing all unique elements from both arrays.",3,merge_sorted_array.cpp | merge_intervals.cpp | union_sorted_arr.cpp
+A-title-final-2,eval,check whether the array is sorted and then rotated,1,sorted_arr_rotated.cpp | merge_sorted_array.cpp | rotate_image.cpp
+A-title-final-2,eval,count subarrays whose elements add up to k,1,subarray_sum_equals_k.cpp | sub_array_xor_k.cpp | sub_array_xor_k_optimal.cpp
+A-title-final-2,eval,longest stretch of elements adding up to k,1,longest_subarr_sum_k.cpp | longest_consecutive_seq.cpp | 4Sum_brute_force.cpp
+A-title-final-2,eval,"Given an array of size n, find the element that appears strictly more than n/2 times, assuming one always exists",,second_largest_arr.cpp | repeating_missing_numbers.cpp | majority_elements_2.cpp
+A-title-final-2,eval,"Given an array of integers of size n, find all elements that appear strictly more than n/3 times",5,repeating_missing_numbers.cpp | 3_sum.cpp | 4Sum_brute_force.cpp
+A-title-final-2,eval,find four numbers that add up to a target,1,4Sum_brute_force.cpp | 4Sum_optimal.cpp | repeating_missing_numbers.cpp
+A-title-final-2,eval,count subarrays with xor equal to k,1,sub_array_xor_k.cpp | sub_array_xor_k_optimal.cpp | subarray_sum_equals_k.cpp
+A-title-final-2,eval,count inversions faster than checking every pair,2,count_inversions.cpp | count_inversions_optimal.cpp | reverse_pairs.cpp
+A-title-final-2,eval,two sum,1,two_sum_optimal.cpp | 3_sum.cpp | subarray_sum_equals_k.cpp
+A-title-final-2,eval,next permutation,1,next_permutation.cpp | majority_elements_2.cpp | merge_intervals.cpp
+A-title-final-2,eval,merge overlapping intervals,1,merge_intervals.cpp | merge_sorted_array.cpp | reverse_pairs.cpp
+A-title-heldout,heldout,walk through a grid layer by layer starting from the outer edge,,rotate_image.cpp | pascals_traingle.cpp | reverse_pairs.cpp
+A-title-heldout,heldout,longest run of consecutive numbers in an unsorted array,1,longest_consecutive_seq.cpp | max_count.cpp | longest_subarr_sum_k.cpp
+A-title-heldout,heldout,one number appears twice and another is missing from 1 to n,1,repeating_missing_numbers.cpp | missing_number.cpp | remove_duplicates_arr.cpp
+A-title-heldout,heldout,turn a square grid ninety degrees clockwise in place,1,rotate_image.cpp | rotate_arr.cpp | set_matrix_zero.cpp
+A-title-heldout,heldout,three sum,1,3_sum.cpp | 4Sum_brute_force.cpp | 4Sum_optimal.cpp
+A-raw-heldout,heldout,walk through a grid layer by layer starting from the outer edge,10,rotate_image.cpp | two_sum_optimal.cpp | set_matrix_zero.cpp
+A-raw-heldout,heldout,longest run of consecutive numbers in an unsorted array,1,longest_consecutive_seq.cpp | max_count.cpp | longest_subarr_sum_k.cpp
+A-raw-heldout,heldout,one number appears twice and another is missing from 1 to n,7,missing_number.cpp | count_inversions.cpp | reverse_pairs.cpp
+A-raw-heldout,heldout,turn a square grid ninety degrees clockwise in place,1,rotate_image.cpp | set_matrix_zero.cpp | print_matrix_spiral_order.cpp
+A-raw-heldout,heldout,three sum,1,3_sum.cpp | 4Sum_brute_force.cpp | max_subarray_sum_index.cpp
